@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/KatAlert.css') }}">
+
+    <title>Event-Alert-Admin</title>
+
+    <style>
+        .btn-danger{
+            background-color: #ca0369 !important;
+        }
+
+        .alert-form{
+            background-color: #f8e28a;
+            padding: 10px;
+            
+        }
+        .alert-form label{
+            padding: 10px;
+        }
+
+        .input-field{
+            position: relative;
+            left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain-elements">
+        <div class="nav-bar row ">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">User</a>
+                <a href="#">Home</a>
+                <a href="#">User Profile</a>
+                <a href="#">Contact Us</a>
+                <a href="#">K-Student Data</a>
+                <a href="#">K-Mentor Interactions</a>
+                <a href="#">Training Feedback</a>
+                <a href="#">Student Requests/ Applications</a>
+                <a href="#">Resource Centre</a>
+                <a href="#">Laptop Options</a>
+                <a href="#">Go to MIS</a>
+                <a href="#">Training Attendance</a>
+                <a href="#">Payout Inbox</a>
+                <a href="{{ url_for('AdminKatAlert') }}">KatAlert</a>
+                <a href="#">Katalyst Newsletter</a>
+            </div>
+              
+            <span style="font-size:30px;cursor:pointer;margin-top:40px" onclick="openNav()">&#9776;</span>
+            <a href = "{{url_for('AdminHomePage')}}">
+                <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+            </a>
+
+            <script>
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+                
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+        </div>
+
+
+        <div class="alert-form">
+            <h1 class="form-title">Create Event-Alert</h1>
+            <form action="" method="post">
+                <label for="event_name">Event Name</label><input type="text" name="" id="event_name" class="input-field" placeholder="Event Name"  required><br>
+                <label for="event_link">Event Link</label><input type="text" name="" id="event_link" class="input-field" placeholder="Event Link"  required><br>
+                <label for="event_date">Event Date</label><input type="date" name="" id="event_date" class="input-field"  required><br>
+                <label for="event_start_time">Event Start Time</label><input type="time" name="" id="event_start_time" class="input-field" required><br>
+                
+                <label >Select year:</label>
+                <input type="checkbox" name="" id="">1st year
+                <input type="checkbox" name="" id="">2nd year
+                <input type="checkbox" name="" id="">3rd year
+                <input type="checkbox" name="" id="">4th year
+            </form>
+
+            <button  class="btn btn-danger btn-lg" type="submit">Create Alert</button>
+        </div>
+
+        <div class="footer text-center"> 
+            <h4 style="text-align:center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra 400025</h4><br>
+            <div class="stickyicon-list"> 
+                <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i class="fa fa-facebook-official"></i> </a>
+                <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+                <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i class="fa fa-instagram"></i> </a>
+                <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+                <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i> </a> 
+                <h6 style="margin-top: 14px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

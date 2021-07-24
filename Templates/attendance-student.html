@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/KatAlert.css') }}">
+
+    <title>Attendance-Student</title>
+
+    <style>
+        .chk-QR {
+            background-color: #f8e28a;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain-elements">
+        <div class="nav-bar row ">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">User</a>
+                <a href="#">Home</a>
+                <a href="#">User Profile</a>
+                <a href="#">Contact Us</a>
+                <a href="{{ url_for('StudentPayout') }}">Payout Status</a>
+                <a href="{{ url_for('QR_scanner') }}">Attendance</a>
+                <a href="{{ url_for('MIAlert') }}">MI Alert</a>
+                <a href="{{ url_for('NewsLetter') }}">NewsLetter</a>
+                <a href="#">K-Student Data</a>
+                <a href="#">K-Mentor Interactions</a>
+                <a href="#">Training Feedback</a>
+              </div>
+
+            <span style="font-size:30px;cursor:pointer;margin-top:40px" onclick="openNav()">&#9776;</span>
+            <a href = "{{url_for('StudentHomePage')}}">
+                <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+            </a>
+
+            <script>
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+        </div>
+
+        <div class="chk-QR">
+            <form action="{{url_for('QR_scanner')}}" method="post">
+                <h1>Validate QR code </h1>
+                <button class="btn btn-danger btn-lg" type="submit">Scan QR code</button><br>
+                <h2>
+                    <span class="badge" for="">{{QR_scan_status}}</span>
+                </h2>
+
+            </form>
+        </div>
+
+
+        <div class="footer text-center">
+            <h4 style="text-align:center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra
+                400025</h4><br>
+            <div class="stickyicon-list">
+                <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i
+                        class="fa fa-facebook-official"></i> </a>
+                <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+                <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i
+                        class="fa fa-instagram"></i> </a>
+                <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i>
+                </a>
+                <h6 style="margin-top: 14px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

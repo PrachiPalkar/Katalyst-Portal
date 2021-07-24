@@ -1,0 +1,150 @@
+.nav {
+    font-family: sans-serif;
+    background-color:#f7c830;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#f7c830;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 45px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000; 
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    background: #ca0369;
+    color: #fff;
+    transition: .5s;
+    text-decoration: none;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 0px;
+  }
+  
+  @media screen and (max-height: 450px){
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 16px;}
+  }
+  
+  .main{
+    display: flex;
+  }
+  .carousel{
+   width: 173vh;
+  }
+  .ann{
+    width: 21%;
+    padding-left: 6vh;
+    background-color: #ca0369;
+  }
+  .head{
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    font-size: x-large;
+    font-weight: bold;
+    color: #fff;
+  }
+  .body{
+    width: 30vh;
+    display: flex;
+    padding: 4px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24;
+  }
+  .a{
+    display: flex;
+    margin-bottom: 4vh;
+    background-color: #f7c830;
+    padding: 2vh;
+    color: #000;
+    justify-self: center;
+    justify-content: center;
+  }
+  .a:hover{
+    background: #e38a00;
+    color: #000;
+    transition: .5s;
+    text-decoration: none;
+  }
+  .more{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    border: 3px solid #fff;
+    padding: 8px;
+  }
+  .more:hover{
+    background: rgb(236, 233, 233);
+    color: #000;
+    transition: .5s;
+    text-decoration: none;
+  }
+  /* Style the Sticky icons on web page */   
+  .stickyicon-list{
+  margin-top: 18px;
+  }
+  
+  .stickyicon-list a {   
+  /*display: block;  */
+  text-align: center;   
+  padding: 8px;   
+  transition: all 0.5s ease;   
+  color: white;   
+  font-size: 20px;   
+  }   
+        
+  /* HOver affect on sticky social media icons */   
+  .stickyicon-list a:hover {   
+  color:#000;  
+  }   
+     
+  /* Now we have to design each icon of social media */         
+  .facebook {   
+  background: #3b5998;   
+  color: white;  
+  }         
+  .twitter {   
+  color: white;   
+  background: #00acee;   
+  }   
+  .linkedin {   
+  background: #0e76a8;   
+  color: white;   
+  }         
+  .instagram {   
+  background: #3f729b;   
+  color: white;   
+  }         
+  .youtube {   
+  color: white;   
+  background: #c4302b;    
+  }  
+  .abc{
+  background:#aaa;
+  text-align:"centre";
+  padding: 15px;
+  width: 100%;
+  /* margin-top: 10px;*/
+  height: 100%;
+  }

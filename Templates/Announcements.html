@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalyst Announcements</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Annoucements.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <!-- Navigation -->
+<body>
+    
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">User</a>
+    <a href="#">Home</a>
+    <a href="#">User Profile</a>
+    <a href="#">Contact Us</a>
+    <a href="{{ url_for('StudentPayout') }}">Payout Status</a>
+    <a href="{{ url_for('QR_scanner') }}">Attendance</a>
+    <a href="{{ url_for('MIAlert') }}">MI Alert</a>
+    <a href="{{ url_for('NewsLetter') }}">NewsLetter</a>
+    <a href="#">K-Student Data</a>
+    <a href="#">K-Mentor Interactions</a>
+    <a href="#">Training Feedback</a>
+  </div>
+    
+    <span style="font-size:30px;cursor:pointer;margin-block-start: 30px;" onclick="openNav()">&#9776;</span>
+    
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    <label class="logo"><a href = "{{url_for('StudentHomePage')}}">
+      <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+  </a></label>
+    <!--Main part-->
+    <h1 style="text-align:center; color: #ca0369; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font: bold;">KATALYST ANNOUNCEMENTS</h1> 
+    
+    <div class="card text-center border" style="margin: 35px; background-color: #f8e799; ">
+        <div class="card-header">
+         <h4 style="font:900;">Special Event</h4>   
+        </div>
+        <div class="card-body" style="font-family: monospace;">
+          <h4 style="font-family: cursive;">Katathon 2021</h4>
+          <p class="card-text">We are excited to announce our first ever Hackathon event called “KataThon”!! The event is held from 3rd July to 4th July. </p></div>
+            <ul class="list-group list-group-flush" style="font-family: monospace;">
+                <li class="list-group-item">3rd July 2021, 9:00 am to 10:00 am.<br>
+                    <a href="https://us02web.zoom.us/j/81384587468?pwd=SVhZRU5SQ3BJUk11TWRnalA3aHZSdz09" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">KataThon Kick-Off</a>
+                </li>
+                <li class="list-group-item">4th July. 10:00 am to 1:00 pm.<br>
+                    <a href="https://us02web.zoom.us/j/83659679342?pwd=N3EyYTJjZ3lBeGxUWDhXWnFjTXR6Zz09" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">KataThon Final Evaluation</a>
+                </li>
+                <li class="list-group-item">4th July. 3:00 pm to 4:00 pm.<br>
+                    <a href="https://us02web.zoom.us/j/89963134594?pwd=N3NZa0xwL0RPYndubm15cS9WZlYyZz09" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">KataThon Closing Ceremony and Winner Announcement</a>
+                </li>
+              </ul>
+          
+        <div class="card-footer text-muted">
+            Ongoing!
+        </div>
+      </div></div>
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 25px; ">
+        
+        <div class="col " >
+            <div class="card h-100 border">
+                <img src="{{ url_for('static', filename='images/anngif3.gif') }}" class="card-img-top" alt="..">
+                <div class="card-body">
+                  <h5 class="card-title">Tech Fest 2021</h5>
+                  <p class="card-text">It's time for all of you to join this new exciting Event being organised on 31st july and 1st of August<br>
+                Event Name: Mini Engineering Project  
+                Guidelines 
+                1.It is a group event with 
+                Minimum group size -2
+                Maximum group size -4  
+                2.You can choose project done by you in college.  
+                3.The project should be either at 
+                a)execution stage
+                b) Completion stage
+                c) Implementation stage 
+                4.Projects should have real time solution to the issue. 
+                5.The project should not be copy paste from Google.
+                </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Last Date For Registration - 4th July 2021 Till 5.00 pm 
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrRFORQeYnhZ8j9gc2mwhHp5i0Y7ObL3M29mUZs59Xh_uumw/viewform?usp=sf_link" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Register Now</a> </li>
+                  </ul>
+                  
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 19/06/2021</small>
+                </div>
+              </div>
+        </div>
+
+        <div class="col ">
+            <div class="card h-100 border">
+                <img src="{{ url_for('static', filename='images/annimg2.jpeg') }}" class="card-img-top" alt="Katalyst Leadership Series">
+                <div class="card-body">
+                  <h5 class="card-title">Katalyst Leadership Series</h5>
+                  <p class="card-text">Rahul Ganjoo is the Head of Food Delivery at Zomato, India’s premier food tech company. He will be talking to us about his transitions through various countries, companies and roles. </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">This session is on 26th June from 4:00 pm to 6:00 pm on Zoom.
+                        <a href="https://us02web.zoom.us/meeting/register/tZIuc-GgrzMpG92s_5CFBWz00XZZCTt1UNZt" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Register now</a>
+                    </li>
+                    <!--li class="list-group-item">A second item</li-->
+                  </ul>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 27/06/2021</small>
+                </div>
+              </div>
+        </div>
+
+        <div class="col " >
+            <div class="card h-100 border">
+                <img src="{{ url_for('static', filename='images/annimg1.jpeg') }}" class="card-img-top" alt="Development Sector Leadership Conversations">
+                <div class="card-body">
+                  <h5 class="card-title">Development Sector Leadership Conversations</h5>
+                  <p class="card-text">Session - 3 with Amit Kumar Singh, Country Representative, Tanager and our host Shital Kakkar Mehra.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Join us for this amazing session on 24th June, 5:00 pm on Zoom.
+                       
+                    <a href="https://bit.ly/3glcNLZ" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Register now</a> </li>
+                  </ul>
+                  
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 24/6/2021</small>
+                </div>
+              </div>
+        </div>
+        
+        <div class="col " >
+            <div class="card h-100 border">
+                <img src="{{ url_for('static', filename='images/anngif2.gif') }}" class="card-img-top" alt="Development Sector Leadership Conversations">
+                <div class="card-body">
+                  <h5 class="card-title">Father's Day Photo Contest Alert 📸</h5>
+                  <p class="card-text">Let's thank our supportive fathers. 👨‍👧
+                    The best shots will be featured 📢 on our handle on father's 20th June, 2021. Ready, set, click! 
+                    Ps: if you don't have an Instagram account, you may post on other platforms like Facebook, Twitter, Linkedin. But remember to use the hashtag #PictureWithPa and to tag and follow Katalyst as same rules apply.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">To enter you must:
+                        - Post your best picture with your dad on Instagram and caption it creatively. Bonus points for pictures that tell a story.
+                        - Tag @katalyst_india in the post and use #PictureWithPa
+                        - Follow @katalyst_india 
+                       
+                    <a href="https://www.instagram.com/katalyst_india/" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Go to Instagram</a> </li>
+                  </ul>
+                  
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 19/06/2021</small>
+                </div>
+              </div>
+        </div>
+
+        <div class="col " >
+            <div class="card h-100 border">
+                <img src="{{ url_for('static', filename='images/anngif1.gif') }}" class="card-img-top" alt="Development Sector Leadership Conversations">
+                <div class="card-body">
+                  <h5 class="card-title">Katathon 2021</h5>
+                  <p class="card-text">Stir the Coders and Creators within you to participate in 1st ever Hackathon hosted by Katalyst which is a 2 day Event ! Get a chance to work under Industry Mentors to solve real world problems and much more !!!!! Open to 2021 and 2022 Graduating Batches Only
+                    Join the Group for live Updates </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Join this first ever Katalyst Hackathon on 3rd July- 10:00 am to 4th July 10:00am on Zoom.                       
+                    <a href="https://bit.ly/3z1dK39" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Join Group Now!</a> </li>
+                  </ul>
+                  
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 03/06/2021</small>
+                </div>
+              </div>
+        </div>
+        <div class="col ">
+          <div class="card h-100 border">
+            <img src="{{ url_for('static', filename='images/annimg4.jpeg') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Development Sector Leadership Conversations</h5>
+              <p class="card-text">Session with Puja Marwaha, Cheif Executive, CRY and Shital Kakkar Mehra, Founder of GoBarefoot.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">This session is on 20th May from 4:30 pm on Facebook-Live.
+                    <a href="#" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Join now</a>
+                </li>
+                
+              </ul>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 19/05/2021</small>
+            </div>
+          </div>
+        </div>
+        <div class="col ">
+            <div class="card h-100 border">
+              <img src="{{ url_for('static', filename='images/annimg5.jpeg') }}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Katalyst Leadership Series</h5>
+                <p class="card-text">Vilas Shettigar is a technologist who enjoys building high quality products in the financial services domain. In his role as Senior Director at NICE, he leads the research & development activities for products in the field of preventing financial crimes. Vilas will be talking to us about “Adjusting Rapidly with Resilience”. </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">This session is on 12th May from 5:00 pm - 7:00 pm on Zoom.
+                      <a href="https://us02web.zoom.us/meeting/register/tZwoceuprD0qGdGZzQaWw279VsYa5Q327mnF" class="btn btn-danger bt-sm" style="align-self: center; justify-content: space-between;">Register now</a>
+                  </li>
+                  
+                </ul>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 11/05/2021</small>
+              </div>
+            </div>
+          </div>
+      </div>
+    <!-- Footer -->
+<footer class="abc">
+    <h4 style="text-align:center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra 400025</h4>
+    <div class="stickyicon-list" style="text-align:center"> 
+    <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i class="fa fa-facebook-official"></i> </a>
+    <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+    <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i class="fa fa-instagram"></i> </a>
+    <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+    <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i> </a> 
+    <h6 style="margin-top: 14px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+    </div>
+  </footer>
+
+
+</body>
+</html>

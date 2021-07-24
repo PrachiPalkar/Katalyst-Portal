@@ -1,0 +1,94 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-left: 5px;
+  }
+  
+  .grid > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  }
+  
+  /* Style the Sticky icons on web page */
+  .stickyicon-list{
+  margin-top: 25px;
+  }
+  
+  .stickyicon-list a {   
+  /*display: block;*/   
+  text-align: center;   
+  padding: 8px;   
+  transition: all 0.5s ease;   
+  color: white;   
+  font-size: 20px;   
+  text-decoration: none;
+  }    
+  
+  /* HOver affect on sticky social media icons */   
+  .stickyicon-list a:hover {   
+  color: #000;   
+  width:20px;   
+  }   
+  
+  .sidenav {
+  /*  padding: 8px 8px 8px 30px;*/
+  align-self: center;
+  text-align: center; 
+    text-decoration: none;
+    font-size: 25px;
+    font-style: bold;
+    color: #000; 
+    display: block;
+    /* transition: 0.3s; */
+  }
+  
+  .sidenav:hover {
+    background: #ca0369;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+  }
+  
+  .card {
+  background-color: #f7c830;
+  align-self: center;
+  margin-left: 5px;
+  border-color: #000;
+  }
+  
+  .card-body{
+    background-color: #f7c830;
+    border-color: #000;
+  }
+  
+  /* Now we have to design each icon of social media */         
+  .facebook {   
+  background: #3b5998;   
+  color: white;  
+  }         
+  .twitter {   
+  color: white;   
+  background: #00acee;   
+  }   
+  .linkedin {   
+  background: #0e76a8;   
+  color: white;   
+  }         
+  .instagram {   
+  background: #3f729b;   
+  color: white;   
+  }         
+  .youtube {   
+  color: white;   
+  background: #c4302b;    
+  } 
+  .abc {
+  background-color:#aaa;
+  margin-top: 120px;
+  padding:20px;
+  justify-content:"centre";
+  text-align:"centre";
+  }
+  

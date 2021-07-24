@@ -1,0 +1,112 @@
+body {
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f7c830;
+}
+
+.contain-elements div {
+  margin: 10px;
+}
+
+.nav-bar {
+  height: 12vh;
+}
+
+.header {
+  height: 20vh;
+}
+
+.redirect-buttons {
+  height: 40vh;
+}
+
+.footer {
+  height: 20vh;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f7c830;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 45px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background: #ca0369;
+  transition: 0.5s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+  padding: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 16px;
+  }
+}
+
+/*Footer styles*/
+/* Style the Sticky icons on web page */
+
+.stickyicon-list a {
+  /*display: block;  */
+  text-align: center;
+  padding: 8px;
+  transition: all 0.5s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* HOver affect on sticky social media icons */
+.stickyicon-list a:hover {
+  color: #000;
+}
+
+/* Now we have to design each icon of social media */
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+.twitter {
+  color: white;
+  background: #00acee;
+}
+.linkedin {
+  background: #0e76a8;
+  color: white;
+}
+.instagram {
+  background: #3f729b;
+  color: white;
+}
+.youtube {
+  color: white;
+  background: #c4302b;
+}
+.footer {
+  background: #aaa;
+}

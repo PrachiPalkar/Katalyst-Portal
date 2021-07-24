@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalyst</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/LandingPage.css') }}">
+</head>
+
+<body style="background-color: #f7c830;">
+  <div class="wrapper">
+    <header class="page-header">
+      <nav style="background-color: #f7c830;">
+        <label class="logo"><img src="{{ url_for('static', filename='images/Klogo.png') }}" alt="Katalyst"></a></label>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Upcoming Events</a></li>
+          <!--<li><a href="#">Contact Us</a></li>-->
+        </ul>
+        <a class="cta-bt" href="{{ url_for('Login') }}">Login</a>
+      </nav>
+    </header>
+    <main class="page-main">
+      <!-- <div>
+        Can add text here
+      </div>-->
+    </main>
+    <!--Footer-->
+    <footer class="page-footer" class="footercolor">
+      <small>© Copyright. All rights reserved.<br>502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai,
+        Maharashtra 400025</small>
+
+      <ul>
+        <li>
+          <a class="footercolor" href="https://www.facebook.com/katalystwindsofchange/">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        </li>
+        <li>
+          <a class="footercolor"
+            href="https://twitter.com/katalyst_india?fbclid=IwAR0Ciy5dAMICaEZj0rKK890iWJgoJ6_di3np4rSz9vYMKNt3xNXVLUfXH7k">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a class="footercolor"
+            href="https://www.linkedin.com/company/katalyst-india?fbclid=IwAR0SymwM1Pj6kAJbROZE5hnNsLVTLXQodBiu1EhiHFQ5IhvH7-ufBFjrV6I">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a class="footercolor"
+            href="https://www.instagram.com/katalyst_india/?fbclid=IwAR3jlk9TIeo1bmLWVwXYJ9j7m2Rv1WvRe6956inOfaaF10ZUwhgDBSgp1cA">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- Footer -->
+    <!--<footer class="abc">
+  <h4 style="text-align:center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra 400025</h4>
+  <div class="stickyicon-list" style="text-align:center"> 
+  <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i class="fa fa-facebook-official"></i> </a>
+  <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+  <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i class="fa fa-instagram"></i> </a>
+  <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+  <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i> </a> 
+  <h6 style="margin-top: 14px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+  </div>
+</footer>-->
+  </div>
+  <!--fontawesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+</body>
+
+</html>

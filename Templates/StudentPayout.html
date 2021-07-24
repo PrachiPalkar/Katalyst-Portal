@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalyst Payout</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/StudentPayout.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- Navigation -->
+
+<body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <a href = "{{ url_for('StudentHomePage') }}">
+    <label class="logo"><a href = "{{url_for('StudentHomePage')}}">
+      <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+    </a></label>
+  </a><!--Main part-->
+  <h1
+    style="text-align:center; color: #ca0369; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font: bold;">
+    KATALYST PAYOUT</h1>
+  <div class="main-container">
+    <div class="box-1">
+      <h3>Student's Bank Details</h3><br>
+      {% for r in rows %}
+      {% if r[5] == Email %}
+      <span class="font-change">
+        <b>UID:</b> {{r[1]}}
+        <br>
+        <b>Name:</b> {{r[2]}} {{r[3]}} {{r[4]}}<br>
+        <b>Bank Name:</b> {{r[9]}}<br>
+        <b>Account Number:</b> {{r[10]}}<br>
+        <b>IFSC code:</b> {{r[11]}}<br>
+        <b>Branch Name:</b> {{r[12]}}<br></span>
+      {% endif %}
+      {% endfor %}
+      <button type="button" class="btn btn-danger" style="float: right;"><a href="requestupdate.html"> Request
+          Update</a></button>
+    </div>
+    <div class="box-2">
+      <h3>Payout Records</h3><br>
+      <table class="table table-striped table-warning font-change">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Semester</th>
+            <th scope="col">Payment Status</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">1</th>
+            <td>I</td>
+            {% if r[14] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[15]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">2</th>
+            <td>II</td>
+            {% if r[16] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[17]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">3</th>
+            <td>III</td>
+            {% if r[18] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[19]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">4</th>
+            <td>IV</td>
+            {% if r[20] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[21]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">5</th>
+            <td>V</td>
+            {% if r[22] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[23]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">6</th>
+            <td>VI</td>
+            {% if r[24] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[25]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">7</th>
+            <td>VII</td>
+            {% if r[26] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[27]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% for r in rows %}
+          {% if r[5] == Email%}
+          <tr>
+            <th scope="row">8</th>
+            <td>VIII</td>
+            {% if r[28] == "Yes" %}
+            <td>Successful</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{r[29]}}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="abc">
+    <h4 style="text-align:center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra 400025</h4>
+    <div class="stickyicon-list" style="text-align:center">
+      <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i class="fa fa-facebook-official"></i>
+      </a>
+      <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+      <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i
+          class="fa fa-instagram"></i> </a>
+      <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+      <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i> </a>
+      <h6 style="margin-top: 14px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

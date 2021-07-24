@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/KatAlert.css') }}">
+    <title>Training-Alert-Admin</title>
+
+    <style>
+        .btn-danger {
+            background-color: #ca0369 !important;
+        }
+
+        .alert-form {
+            background-color: #f8e28a;
+            padding: 10px;
+        }
+
+        .alert-form label {
+            padding: 10px;
+        }
+
+        .input-field {
+            position: relative;
+            left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain-elements">
+        <div class="nav-bar row ">
+            <a href = "{{url_for('AdminHomePage')}}">
+                <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+            </a>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+        </div>
+
+        <div class="alert-form">
+            <h1 class="form-title">Create Training-Alert</h1>
+            <form action="{{url_for('AddTraining')}}" method="post">
+                <label for="training_name">Training Name</label><input type="text" name="name" id="training_name"
+                    class="input-field" placeholder="Training Name" required><br>
+                <label for="trainer_name">Trainer Name</label><input type="text" name="professor" id="trainer_name"
+                    class="input-field" placeholder="Trainer Name" required><br>
+                <label for="training_link">Training Link</label><input type="text" name="link" id="training_link"
+                    class="input-field" placeholder="Training Link" required><br>
+                <label for="training_date">Training Date</label><input type="date" name="date" id="training_date"
+                    class="input-field" required><br>
+                <label for="training_start_time">Training Start Time</label><input type="time" name="time"
+                    id="training_start_time" class="input-field" required><br>
+                <label>Select year:</label>
+                <input type="radio" name="year" value="1">1st year
+                <input type="radio" name="year" value="2">2nd year
+                <input type="radio" name="year" value="3">3rd year
+                <input type="radio" name="year" value="4">4th year
+                <button class="btn btn-danger btn-lg" type="submit">Create Alert</button>
+            </form>
+        </div>
+
+
+        <div class="footer text-center">
+            <h4 style="text-align:center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra
+                400025</h4><br>
+            <div class="stickyicon-list">
+                <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i
+                        class="fa fa-facebook-official"></i> </a>
+                <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+                <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i
+                        class="fa fa-instagram"></i> </a>
+                <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i
+                        class="fa fa-linkedin"></i> </a>
+                <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i
+                        class="fa fa-youtube"></i> </a>
+                <h6 style="margin-top: 14px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

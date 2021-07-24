@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-color: #f7c830;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            margin-left: 40px;
+            grid-gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card{
+            background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+        }
+        .card-img-top{
+            align-self: center;
+            width: 12rem;
+            border-color: #000;
+            background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+        }
+        .card-body{  
+        text-align: center;
+        background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+        }
+        
+
+        .year {
+            color: #000;
+            display: block;
+            font-size: 25px;
+        }
+
+        .year:hover {
+            background: #e75aa3;
+            color: #fff;
+            transition: .5s;
+        }
+
+        .abc {
+            background-color: #aaa;
+            margin-top: 8%;
+            padding: 10px;
+        }
+
+        .stickyicon-list {
+            margin-top: 10px;
+        }
+
+        .stickyicon-list a {
+            /*display: block;*/
+            text-align: center;
+            padding: 8px;
+            transition: all 0.5s ease;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Now we have to design each icon of social media */
+        .facebook {
+            background: #3b5998;
+            color: white;
+        }
+
+        .twitter {
+            color: white;
+            background: #00acee;
+        }
+
+        .linkedin {
+            background: #0e76a8;
+            color: white;
+        }
+
+        .instagram {
+            background: #3f729b;
+            color: white;
+        }
+
+        .youtube {
+            color: white;
+            background: #c4302b;
+        }
+    </style>
+
+    <a href = "{{url_for('AdminHomePage')}}">
+        <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+    </a>
+    <h1
+    style="text-align:center; color: #ca0369; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font: bold;">
+    ADD PAYOUT DATA</h1>
+    <div class="grid">
+        <div class="card">
+            <img class="card-img-top" src="{{ url_for('static', filename='images/transp-payout.png') }}">
+    <div class=" card-body">
+            <a href="{{url_for('firstYearStudentsPayoutData')}}" class="year">1st year</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/transp-payout.png') }}">
+    <div class=" card-body">
+        <a href="{{url_for('secondYearStudentsPayoutData')}}" class="year">2nd year</a>
+    </div>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/transp-payout.png') }}"">
+    <div class=" card-body">
+        <a href="{{url_for('thirdYearStudentsPayoutData')}}" class="year">3rd year</a>
+    </div>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="{{ url_for('static', filename='images/transp-payout.png') }}">
+        <div class="card-body">
+            <a href="{{url_for('fourthYearStudentsPayoutData')}}" class="year">4th year</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="abc">
+        <h4 style="text-align: center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra 400025
+        </h4>
+        <div class="stickyicon-list" style="text-align:center">
+            <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i
+                    class="fa fa-facebook-official"></i> </a>
+            <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+            <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i
+                    class="fa fa-instagram"></i> </a>
+            <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i>
+            </a>
+            <h6 style="margin-top: 10px;margin-bottom: 2px;">© Copyright. All rights reserved.</h6>
+        </div>
+    </footer>
+
+    <!--Responsive-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

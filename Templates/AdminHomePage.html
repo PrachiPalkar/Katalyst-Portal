@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+ <!--script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/AdminHome_Page.css') }}">
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bod" style="font-family: Lato, sans-serif; background-color:#f7c830;">
+  <div>
+    <header class="page-header">
+        <nav style="background-color: #f7c830;">
+            <label class="logo"></label><img src="{{ url_for('static', filename='images/Klogo.png') }}"
+                    alt="Katalyst"></label>
+        <div>
+    </header>
+</div>
+  <!-- Navigation -->
+  <main class="grid">
+    <div class="card" style="width: 15rem; background-color: #f7c830;">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/transp-user-plus.png') }}">
+      <div class="card-body">
+        <a href="{{url_for('AddStudent')}}" class="sidenav">K-Student</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 15rem;background-color: #f7c830;">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/transp-payout.png') }}">
+      <div class="card-body">
+        <a href="{{url_for('AddPayout')}}" style="margin-left: 10px;" class="sidenav">Add Payout</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 15rem;background-color: #f7c830;">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/tranp-alert.png') }}">
+      <div class="card-body">
+        <a href="{{url_for('AdminKatAlert')}}" class="sidenav">Set KatAlert</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 15rem;background-color: #f7c830;">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/transp-attend.png') }}">
+      <div class="card-body">
+        <a href="{{url_for('QR_generate')}}" class="sidenav">Add Attendance</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 15rem;height: 300px;background-color: #f7c830;">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/transp-news.png') }}">
+      <div style="margin-top: 50px" class="card-body">
+        <a href="{{url_for('AddNewsLetter')}}" class="sidenav">Publish Newsletter</a>
+      </div>
+    </div>
+
+    <div style="height: 300px;width: 15rem;background-color: #f7c830; margin-left:530px" class="card">
+    <img style="background-color: #f7c830;" class="card-img-top"
+        src="{{ url_for('static', filename='images/transp-ann.png') }}">
+      <div style="margin-top: 14px;" class="card-body">
+        <a href="{{url_for('AddAnnouncement')}}" class="sidenav">Announcement</a>
+      </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="abc">
+    <h4 style="text-align: center">502 A Wing Aurus Chambers, S S Amrutwar Marg, Worli, Mumbai, Maharashtra 400025</h4>
+    <div class="stickyicon-list" style="text-align:center">
+      <a href="https://www.facebook.com/katalystwindsofchange/" class="facebook"><i class="fa fa-facebook-official"></i>
+      </a>
+      <a href="https://twitter.com/katalyst_india?s=08" class="twitter"><i class="fa fa-twitter"></i> </a>
+      <a href="https://instagram.com/katalyst_india?utm_medium=copy_link" class="instagram"><i
+          class="fa fa-instagram"></i> </a>
+      <a href="https://www.linkedin.com/company/katalyst-india" class="linkedin"><i class="fa fa-linkedin"></i> </a>
+      <a href="https://youtube.com/channel/UCZHaD0cW87rOic7ZrU8HJRw" class="youtube"><i class="fa fa-youtube"></i> </a>
+      <h6 style="margin-top: 25px;margin-bottom: 3px;">© Copyright. All rights reserved.</h6>
+    </div>
+  </footer>
+
+  <!--Responsive-->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/StudentData.css') }}">
+</head>
+
+<body>
+    <div>
+        <header class="page-header">
+            <nav style="background-color: #f7c830;">
+                <label class="logo"><a href = "{{url_for('AdminHomePage')}}"></a>
+                    <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+                  </a></label>
+                <form action="{{url_for('uploadStudentData')}}" method="POST" enctype='multipart/form-data'>
+                    <input type="submit" style="color: white; background-color:#ca0369; float: right; border: 2px solid;
+            border-radius: 5px; margin-top: 20px; height: 33px;">
+                    <input type="file" id="myFile" name="file" style="color: white; background-color:#ca0369; float: right; border: 2px solid;
+                    border-radius: 5px; margin-top: 20px;">
+                </form>
+            </nav>
+            <b>
+                <h3 style="margin-top: 20px; color: #ca0369">{{Year}} Year Student Details</h3>
+            </b>
+            <div>
+        </header>
+    </div>
+    <div>
+        <table id="students">
+            <tr>
+                <th>UID</th>
+                <th>F-Name</th>
+                <th>M-Name</th>
+                <th>L-Name</th>
+                <th>Email Id</th>
+                <th>DOB</th>
+                <th>College</th>
+                <th>Year</th>
+                <th>Bank Name</th>
+                <th>Account No</th>
+                <th>IFSC No</th>
+                <th>Branch</th>
+            </tr>
+            {% for i in rows %}
+            <tr>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+                <td>{{i[5]}}</td>
+                <td>{{i[6]}}</td>
+                <td>{{i[7]}}</td>
+                <td>{{i[8]}}</td>
+                <td>{{i[9]}}</td>
+                <td>{{i[10]}}</td>
+                <td>{{i[11]}}</td>
+                <td>{{i[12]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+
+</html>

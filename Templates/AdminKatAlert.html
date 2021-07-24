@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+ <!--script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/AdminHome_Page.css') }}">
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="body" style="font-family: Lato, sans-serif; background-color:#f7c830;">
+
+  <a href = "{{url_for('AdminHomePage')}}">
+    <img src="{{ url_for('static', filename='images/KLogo.png') }}" alt="">
+</a>
+
+  <!-- Navigation -->
+  <main class="grid">
+    <div class="card" style="width: 20rem;background-color: #f7c830;">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/transp-training.png') }}">
+      <div class="card-body">
+        <a href="{{url_for('AdminTrainingAlert')}}" class="sidenav">Training Alert</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 20rem;background-color: #f7c830; margin-left: 200px">
+      <img style="background-color: #f7c830;" class="card-img-top"
+        src="{{ url_for('static', filename='images/transp-form.png') }}">
+      <div style="margin-top: 14px;" class="card-body">
+        <a href="{{url_for('AdminFormAlert')}}" class="sidenav">Form Filling Alert</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 20rem;background-color: #f7c830; margin-left: 400px">
+      <img class="card-img-top" src="{{ url_for('static', filename='images/transp-event.png') }}">
+      <div class="card-body">
+        <a href="{{url_for('AdminEventAlert')}}" class="sidenav">Event Alert</a>
+      </div>
+    </div>
+
+    <!--Responsive-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
